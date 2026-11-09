@@ -1,0 +1,13 @@
+diff --git a/lcl/interfaces/qt5/qtwsforms.pp b/lcl/interfaces/qt5/qtwsforms.pp
+index 0748434656..aa58651da2 100644
+--- a/lcl/interfaces/qt5/qtwsforms.pp
++++ b/lcl/interfaces/qt5/qtwsforms.pp
+@@ -234,7 +234,7 @@ begin
+       QtMainWindow.setRealPopupParent(TQtWidget(APopupParent.Handle).Widget);
+   end;
+ 
+-  {$IFDEF HASX11}
++  {$IFDEF HASX11_xxx}
+   if QtMainWindow.IsMainForm and not Application.HasOption('disableaccurateframe') then
+   begin
+     (*

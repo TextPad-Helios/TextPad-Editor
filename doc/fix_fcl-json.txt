@@ -1,0 +1,17 @@
+jsonconf.pp
+
+Must use fmShareDenyNone in TFileStream:
+
+procedure TJSONConfig.LoadFromFile(const AFileName: String);
+
+Var
+  F : TFileStream;
+
+begin
+  F:=TFileStream.Create(AFileName,fmOpenRead or fmShareDenyNone);
+  try
+    LoadFromStream(F);
+  finally
+    F.Free;
+  end;
+end; 
